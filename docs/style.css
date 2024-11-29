@@ -326,3 +326,59 @@ html {
     color: #bf212e;     
     transform: translateY(2px);
 }
+/* Configuração básica do slider */
+.slider {
+    position: relative;
+    width: 100%;               /* Ajuste o tamanho conforme necessário */
+    overflow: hidden;          /* Esconde os slides fora da área visível */
+}
+
+.slides {
+    display: flex;             /* Organiza os slides em uma linha */
+    transition: transform 0.5s ease-in-out;  /* Transição suave para o movimento */
+}
+
+.slide {
+    min-width: 100%;           /* Cada slide ocupa toda a largura do slider */
+    height: auto;              /* Ajusta a altura automaticamente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;               /* A imagem ocupa 100% da largura do slide */
+    height: auto;              /* Ajusta a altura proporcionalmente */
+}
+
+/* Botões de navegação (anterior e próximo) */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);  /* Cor de fundo semitransparente */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 100;  /* Garante que os botões fiquem acima dos slides */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Adicione um estilo para as setas, caso deseje */
+.prev:before, .next:before {
+    content: '\2190';  /* seta esquerda */
+}
+
+.next:before {
+    content: '\2192';  /* seta direita */
+}
+
