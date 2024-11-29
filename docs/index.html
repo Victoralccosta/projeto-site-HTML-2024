@@ -115,195 +115,185 @@
         }
     </style>
 </head>
-
 <body>
+    <header>
+        <div class="content">
+            <div class="logo">
+                <img src="logotavolaoficial.png" alt="La Tavola">
+            </div>
+            <ul class="list-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobrenos">Sobre nós</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="formulario/reserva.html">Reserva</a></li>
+                <li><a href="carrinho.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
 
-    <section>
-        <div class="slider-container">
+            <div class="menu-toggle">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="first-section" id="home">
+        <div class="conteudo-principal">
+            <h1>RESTAURANTE LA TAVOLA</h1>
+            <h2>OS MELHORES MACARRÕES VOCÊ SÓ ENCONTRA AQUI!!</h2>
+        </div>
+    </section>
+
+    <section class="sobre-nos" id="sobrenos">
+        <div class="main">
+            <div class="contentsobre">
+                <h2>Sobre Nós</h2>
+                <p><p>Bem vindo ao La Tavola italiana, Nosso restaurante, fundado em 1889 por nosso querido Vicenzo Lopes,
+                    é uma verdadeira homenagem á tradição e á paixão, pela culinária italiana.
+                    Desde então, temos o orgulho de passar o seu legado de geração em geração, 
+                    oferecendo pratos autênticos que refletem a rica herança da cozinha italiana.
+                    Aqui, cada refeição é uma celebração dos sabores e aromas da Itália, 
+                    convidamos você á fazer parte da nossa história e desfrutar de uma experiência gastronômica única. BOM APETITE!</p></p>
+            </div>
+            <div class="img-cozinha">
+                <img src="./sobre.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="cardapio" id="cardapio">
+        <h2>Cardápio</h2>
+
+        <!-- Slider de itens do cardápio -->
+        <div class="slider">
             <div class="slides">
-                <!-- Slide 1 -->
-                <div class="slide" data-id="1" data-name="pizza" data-preco="45,00">
-                    <img src="./pizza.jpg" alt="Pizza">
-                    <div class="title">Pizza Margherita</div>
-                    <div class="description">Pizza com molho de tomate, queijo mussarela e manjericão.</div>
-                    <div class="preco">R$ 45,00</div>
-                    <button class="button pedir" data-nome="Pizza Margherita" data-preco="45,00">Pedir agora</button>
+                   <!-- Slide 1 -->
+                <div class="slide" data-id="1" data-name="pratos salgados" data-preco="80,00">
+                    <img src="./macaroni.jpg" alt="macarrões">
+                    <div class="title">Conheça nossas sobremesas</div>
+                    <div class="description">Deliciosas sobremesas para complementar seu prato!</div>
+                    <div class="preco">R$ 80,00</div>
+                    <button class="button pedir" data-nome="Conheça nossas sobremesas" data-preco="80,00">Pedir agora</button>
                 </div>
                 <!-- Slide 2 -->
-                <div class="slide" data-id="2" data-name="salada" data-preco="30,00">
-                    <img src="./salada.jpg" alt="Salada">
-                    <div class="title">Salada Caesar</div>
-                    <div class="description">Alface romana, frango grelhado, molho Caesar e croutons.</div>
-                    <div class="preco">R$ 30,00</div>
-                    <button class="button pedir" data-nome="Salada Caesar" data-preco="30,00">Pedir agora</button>
+                <div class="slide" data-id="2" data-name="Macarrão à Bolonhesa" data-preco="79,00">
+                    <img src="./bolanhesa.jpg" alt="Macarrão à Bolonhesa">
+                    <div class="title">Macarrão à Bolonhesa</div>
+                    <div class="description">O macarrão à bolonhesa é um prato tradicional italiano...</div>
+                    <div class="preco">R$ 79,00</div>
+                    <button class="button pedir" data-nome="Macarrão à Bolonhesa" data-preco="79,00">Pedir agora</button>
                 </div>
                 <!-- Slide 3 -->
-                <div class="slide" data-id="3" data-name="sushi" data-preco="50,00">
-                    <img src="./sushi.jpg" alt="Sushi">
-                    <div class="title">Sushi de salmão</div>
-                    <div class="description">Sushi com salmão fresco e arroz temperado.</div>
-                    <div class="preco">R$ 50,00</div>
-                    <button class="button pedir" data-nome="Sushi de salmão" data-preco="50,00">Pedir agora</button>
+                <div class="slide" data-id="3" data-name="Macarrão cappellini" data-preco="65,00">
+                    <img src="./cappellini.jpg" alt="Macarrão cappellini>
+                    <div class="title">Macarrão cappellini</div>
+                    <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
+                    <div class="preco">R$ 65,00</div>
+                    <button class="button pedir" data-nome="Macarrão cappellini" data-preco="65,00">Pedir agora</button>
                 </div>
                 <!-- Slide 4 -->
-                <div class="slide" data-id="4" data-name="hamburguer" data-preco="35,00">
-                    <img src="./hamburguer.jpg" alt="Hambúrguer">
-                    <div class="title">Hambúrguer de Carne</div>
-                    <div class="description">Carne suculenta, queijo cheddar, alface e tomate no pão artesanal.</div>
-                    <div class="preco">R$ 35,00</div>
-                    <button class="button pedir" data-nome="Hambúrguer de Carne" data-preco="35,00">Pedir agora</button>
+                <div class="slide" data-id="4" data-name="Macarrão Carbonara" data-preco="65,00">
+                    <img src="./carbonara.jpg" alt="Macarrão Carbonara">
+                    <div class="title">Macarrão Carbonara</div>
+                    <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
+                    <div class="preco">R$ 65,00</div>
+                    <button class="button pedir" data-nome="Macarrão Carbonara" data-preco="65,00">Pedir agora</button>
                 </div>
                 <!-- Slide 5 -->
-                <div class="slide" data-id="5" data-name="sopa" data-preco="25,00">
-                    <img src="./sopa.jpg" alt="Sopa">
-                    <div class="title">Sopa de Abóbora</div>
-                    <div class="description">Sopa cremosa de abóbora com toque de creme de leite.</div>
-                    <div class="preco">R$ 25,00</div>
-                    <button class="button pedir" data-nome="Sopa de Abóbora" data-preco="25,00">Pedir agora</button>
+                <div class="slide" data-id="5" data-name="Macarrão farfalle" data-preco="65,00">
+                    <img src="./farfalle.jpg" alt="Macarrão farfalle">
+                    <div class="title">Macarrão farfalle</div>
+                    <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
+                    <div class="preco">R$ 65,00</div>
+                    <button class="button pedir" data-nome="Macarrão farfalle" data-preco="65,00">Pedir agora</button>
                 </div>
-
+                <!-- Slide 5 -->
+                <div class="slide" data-id="6" data-name="Macarrão fusilli" data-preco="65,00">
+                    <img src="./fusilli.png" alt="Macarrão fusilli">
+                    <div class="title">Macarrão fussilli</div>
+                    <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
+                    <div class="preco">R$ 65,00</div>
+                    <button class="button pedir" data-nome="Macarrão fusilli" data-preco="65,00">Pedir agora</button>
+                </div>
                 <!-- Slide 6 -->
-                <div class="slide" data-id="6" data-name="tacos" data-preco="40,00">
-                    <img src="./tacos.jpg" alt="Tacos">
-                    <div class="title">Tacos Mexicanos</div>
-                    <div class="description">Tacos crocantes recheados com carne temperada e guacamole.</div>
-                    <div class="preco">R$ 40,00</div>
-                    <button class="button pedir" data-nome="Tacos Mexicanos" data-preco="40,00">Pedir agora</button>
+                <div class="slide" data-id="7" data-name="Macarrão penne" data-preco="65,00">
+                    <img src="./penne.jpg" alt="Macarrão penne">
+                    <div class="title">Macarrão penne</div>
+                    <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
+                    <div class="preco">R$ 65,00</div>
+                    <button class="button pedir" data-nome="Macarrão penne" data-preco="65,00">Pedir agora</button>
                 </div>
-
                 <!-- Slide 7 -->
-                <div class="slide" data-id="7" data-name="frango" data-preco="40,00">
-                    <img src="./frango.jpg" alt="Frango ao molho de mostarda">
-                    <div class="title">Frango ao molho de mostarda</div>
-                    <div class="description">Frango suculento com molho de mostarda e batatas.</div>
-                    <div class="preco">R$ 40,00</div>
-                    <button class="button pedir" data-nome="Frango ao molho de mostarda" data-preco="40,00">Pedir agora</button>
+                <div class="slide" data-id="8" data-name="Macarrão ravioli" data-preco="65,00">
+                    <img src="./ravioli.jpg" alt="Macarrão ravioli">
+                    <div class="title">Macarrão ravioli</div>
+                    <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
+                    <div class="preco">R$ 65,00</div>
+                    <button class="button pedir" data-nome="Macarrão ravioli" data-preco="65,00">Pedir agora</button>
                 </div>
-
                 <!-- Slide 8 -->
-                <div class="slide" data-id="8" data-name="sopa" data-preco="35,00">
-                    <img src="./sopa.jpg" alt="Sopa">
-                    <div class="title">Sopa de legumes</div>
-                    <div class="description">Sopa quente com legumes frescos e temperos especiais.</div>
-                    <div class="preco">R$ 35,00</div>
-                    <button class="button pedir" data-nome="Sopa de legumes" data-preco="35,00">Pedir agora</button>
+                <div class="slide" data-id="9" data-name="Macarrão tagliatelle" data-preco="65,00">
+                    <img src="./tagliatellea.jpg" alt="Macarrão tagliatelle">
+                    <div class="title">Macarrão tagliatelle</div>
+                    <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
+                    <div class="preco">R$ 65,00</div>
+                    <button class="button pedir" data-nome="Macarrão tagliatelle" data-preco="65,00">Pedir agora</button>
                 </div>
-
                 <!-- Slide 9 -->
-                <div class="slide" data-id="9" data-name="bife" data-preco="75,00">
-                    <img src="./bife.jpg" alt="Bife">
-                    <div class="title">Bife de filé mignon</div>
-                    <div class="description">Filé mignon grelhado, acompanhado de batatas fritas.</div>
-                    <div class="preco">R$ 75,00</div>
-                    <button class="button pedir" data-nome="Bife de filé mignon" data-preco="75,00">Pedir agora</button>
+                <div class="slide" data-id="10" data-name="bebidas" data-preco="65,00">
+                    <img src="./adega.jpg" alt="bebidas">
+                    <div class="title">nossa adega </div>
+                    <div class="description">uma boa massa pede um bom vinho venha conhecer nosso cardapio...</div>
+                    <div class="preco">R$ 65,00</div>
+                    <button class="button pedir" data-nome="Macarrão Carbonara" data-preco="65,00">Pedir agora</button>
                 </div>
-
                 <!-- Slide 10 -->
-                <div class="slide" data-id="10" data-name="massa" data-preco="45,00">
-                    <img src="./massa.jpg" alt="Massa">
-                    <div class="title">Massa à bolonhesa</div>
-                    <div class="description">Massa fresca com molho de carne e tomate.</div>
-                    <div class="preco">R$ 45,00</div>
-                    <button class="button pedir" data-nome="Massa à bolonhesa" data-preco="45,00">Pedir agora</button>
+                <div class="slide" data-id="11" data-name="Macarrão Carbonara" data-preco="65,00">
+                    <img src="./cappellini.jpg" alt="Macarrão Carbonara">
+                    <div class="title">Macarrão Carbonara</div>
+                    <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
+                    <div class="preco">R$ 65,00</div>
+                    <button class="button pedir" data-nome="Macarrão Carbonara" data-preco="65,00">Pedir agora</button>
                 </div>
-
                 <!-- Slide 11 -->
-                <div class="slide" data-id="11" data-name="sushi" data-preco="60,00">
-                    <img src="./sushi.jpg" alt="Sushi">
-                    <div class="title">Sushi de Atum</div>
-                    <div class="description">Sushi com atum fresco e arroz temperado.</div>
-                    <div class="preco">R$ 60,00</div>
-                    <button class="button pedir" data-nome="Sushi de Atum" data-preco="60,00">Pedir agora</button>
+                <div class="slide" data-id="12" data-name="Macarrão Carbonara" data-preco="65,00">
+                    <img src="./cappellini.jpg" alt="Macarrão Carbonara">
+                    <div class="title">Macarrão Carbonara</div>
+                    <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
+                    <div class="preco">R$ 65,00</div>
+                    <button class="button pedir" data-nome="Macarrão Carbonara" data-preco="65,00">Pedir agora</button>
                 </div>
 
-                <!-- Slide 12 -->
-                <div class="slide" data-id="12" data-name="tacos" data-preco="50,00">
-                    <img src="./tacos.jpg" alt="Tacos">
-                    <div class="title">Tacos de Carne</div>
-                    <div class="description">Tacos recheados com carne moída temperada e guacamole.</div>
-                    <div class="preco">R$ 50,00</div>
-                    <button class="button pedir" data-nome="Tacos de Carne" data-preco="50,00">Pedir agora</button>
-                </div>
-
-                <!-- Slide 13 -->
-                <div class="slide" data-id="13" data-name="hamburguer" data-preco="40,00">
-                    <img src="./hamburguer.jpg" alt="Hamburguer">
-                    <div class="title">Hambúrguer Vegetariano</div>
-                    <div class="description">Hambúrguer vegetariano com cogumelos e queijo vegan.</div>
-                    <div class="preco">R$ 40,00</div>
-                    <button class="button pedir" data-nome="Hambúrguer Vegetariano" data-preco="40,00">Pedir agora</button>
-                </div>
-
-                <!-- Slide 14 -->
-                <div class="slide" data-id="14" data-name="pizza" data-preco="50,00">
-                    <img src="./pizza.jpg" alt="Pizza">
-                    <div class="title">Pizza de Calabresa</div>
-                    <div class="description">Pizza de calabresa com cebola roxa e azeitonas.</div>
-                    <div class="preco">R$ 50,00</div>
-                    <button class="button pedir" data-nome="Pizza de Calabresa" data-preco="50,00">Pedir agora</button>
-                </div>
-
-                <!-- Slide 15 -->
-                <div class="slide" data-id="15" data-name="frango" data-preco="35,00">
-                    <img src="./frango.jpg" alt="Frango">
-                    <div class="title">Frango Grelhado</div>
-                    <div class="description">Frango grelhado com arroz e legumes.</div>
-                    <div class="preco">R$ 35,00</div>
-                    <button class="button pedir" data-nome="Frango Grelhado" data-preco="35,00">Pedir agora</button>
-                </div>
-
-                <!-- Slide 16 -->
-                <div class="slide" data-id="16" data-name="sopa" data-preco="28,00">
-                    <img src="./sopa.jpg" alt="Sopa">
-                    <div class="title">Sopa de Tomate</div>
-                    <div class="description">Sopa cremosa de tomate com manjericão.</div>
-                    <div class="preco">R$ 28,00</div>
-                    <button class="button pedir" data-nome="Sopa de Tomate" data-preco="28,00">Pedir agora</button>
-                </div>
-
-                <!-- Slide 17 -->
-                <div class="slide" data-id="17" data-name="pizza" data-preco="55,00">
-                    <img src="./pizza.jpg" alt="Pizza">
-                    <div class="title">Pizza de Quatro Queijos</div>
-                    <div class="description">Pizza com queijos mozzarella, gorgonzola, parmesão e provolone.</div>
-                    <div class="preco">R$ 55,00</div>
-                    <button class="button pedir" data-nome="Pizza de Quatro Queijos" data-preco="55,00">Pedir agora</button>
-                </div>
-
-                <!-- Slide 18 -->
-                <div class="slide" data-id="18" data-name="sushi" data-preco="80,00">
-                    <img src="./sushi.jpg" alt="Sushi">
-                    <div class="title">Sushi de Salmão</div>
-                    <div class="description">Salmão fresco com arroz temperado e molho de soja.</div>
-                    <div class="preco">R$ 80,00</div>
-                    <button class="button pedir" data-nome="Sushi de Salmão" data-preco="80,00">Pedir agora</button>
-                </div>
-
-                <!-- Slide 19 -->
-                <div class="slide" data-id="19" data-name="tacos" data-preco="45,00">
-                    <img src="./tacos.jpg" alt="Tacos">
-                    <div class="title">Tacos de Frango</div>
-                    <div class="description">Tacos recheados com frango grelhado, guacamole e molho de pimenta.</div>
-                    <div class="preco">R$ 45,00</div>
-                    <button class="button pedir" data-nome="Tacos de Frango" data-preco="45,00">Pedir agora</button>
-                </div>
-
-                <!-- Slide 20 -->
-                <div class="slide" data-id="20" data-name="bife" data-preco="70,00">
-                    <img src="./bife.jpg" alt="Bife">
-                    <div class="title">Bife de Alcatra</div>
-                    <div class="description">Bife de alcatra grelhado, servido com batatas rústicas.</div>
-                    <div class="preco">R$ 70,00</div>
-                    <button class="button pedir" data-nome="Bife de Alcatra" data-preco="70,00">Pedir agora</button>
-                </div>
+                <!-- Mais itens -->
             </div>
+
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
         </div>
     </section>
+</script>
+<section class="contatos" id="contatos">
+    <h3>Contatos</h3>
+    <div class="contatos-secao">
+        <div>
+            <i class="fas fa-phone"></i>
+            <span>(19) 98888-7777</span>
+        </div>
+        <div>
+            <i class="fab fa-instagram"></i>
+            <span>@Latavola_italiana</span>
+        </div>
+        <div>
+            <i class="fab fa-facebook-f"></i>
+            <span>LaTavola Italiana</span>
+    </div>
+    </div>
+</section>
+
 
     <footer>
-        <p>&copy; 2024 Restaurante. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Restaurante La Tavola. Todos os direitos reservados.</p>
     </footer>
 
     <script>
@@ -340,6 +330,6 @@
             updateSlidePosition();
         });
     </script>
+    
 </body>
-
 </html>
