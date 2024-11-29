@@ -124,3 +124,50 @@ function validarFormulario() {
     // Outras validações podem ser adicionadas
     return true; // Permite o envio do formulário
 }
+{
+let slideIndex = 0;
+
+// Função para mostrar o slide correto
+function mostrarSlides() {
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    // Verifica se o número de slides é válido (máximo de 20 slides)
+    if (totalSlides > 20) {
+        alert('O número de slides excede o limite de 20.');
+        return;
+    }
+
+    // Garantir que o índice esteja dentro do intervalo válido
+    if (slideIndex >= totalSlides) {
+        slideIndex = 0; // Volta para o primeiro slide
+    } else if (slideIndex < 0) {
+        slideIndex = totalSlides - 1; // Vai para o último slide
+    }
+
+    // Calcula o deslocamento com base no índice
+    const offset = -slideIndex * 100;
+
+    // Aplica a transformação para mover os slides
+    document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+}
+
+// Função para avançar o slide
+function nextSlide() {
+    slideIndex++;
+    mostrarSlides();
+}
+
+// Função para voltar ao slide anterior
+function prevSlide() {
+    slideIndex--;
+    mostrarSlides();
+}
+
+// Adicionando os eventos para os botões de navegação
+document.querySelector('.next').addEventListener('click', nextSlide);
+document.querySelector('.prev').addEventListener('click', prevSlide);
+
+// Mostrar o slide inicial
+mostrarSlides();
+}
