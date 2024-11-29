@@ -512,3 +512,25 @@ img {
     max-width: 100%; /* As imagens não ultrapassam a largura da tela */
     height: auto;    /* Mantém a proporção da imagem */
 }
+/* Esconder o menu toggle por padrão (para telas maiores) */
+.menu-toggle {
+    display: none;
+}
+
+/* Exibir o menu toggle em telas menores */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;  /* Torna o ícone de menu visível em telas pequenas */
+        cursor: pointer;
+        background-color: #333;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .menu-toggle div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+    }
+}
