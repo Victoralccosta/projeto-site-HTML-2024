@@ -1,35 +1,4 @@
-[13:37, 23/11/2024] Victor Costa: let show = true;
-const menuContent = document.querySelector('.content');
-const menuToggle = menuContent.querySelector('.menu-toggle');
-let carrinho = [];
-
-// Controlar a visibilidade do menu
-menuToggle.addEventListener('click', () => {
-    document.body.style.overflow = show ? 'hidden' : 'initial';
-    menuContent.classList.toggle('on', show);
-    show = !show;
-});
-
-// Função para adicionar itens ao carrinho
-function adicionarAoCarrinho(nome, preco) {
-    const item = { nome, preco };
-    carrinho.push(item);
-    alert(${nome} foi adicionado ao seu carrinho!);
-    atualizarCarrinho();
-}
-
-// Função para atualizar a exibição do carrinho
-function atualizarCarrinho() {
-    const carrinhoDiv = document.getElementById('carrinho');
-    carrinhoDiv.innerHTML = '';
-
-…
-[02:38, 29/11/2024] Victor Costa: Chianti – Um dos vinhos mais conhecidos da região da Toscana, geralmente feito com uvas Sangiovese.
-Barolo – Um vinho robusto e tânico da região do Piemonte, feito com a uva Nebbiolo.
-Prosecco – Um vinho espumante leve e refrescante, originário da região do Vêneto.
-Brunello di Montalcino – Um vinho tinto de alta qualidade da Toscana, produzido com 100% de uvas Sangiovese.
-Amarone della Valpolicella – Um vinho tinto encorpado e complexo da região do Vêneto, feito com uvas passificadas, como Corvina e Rondinella.
-[12:31, 29/11/2024] Victor Costa: @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');               
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');               
 
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
