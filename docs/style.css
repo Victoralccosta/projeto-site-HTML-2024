@@ -24,14 +24,14 @@ html {
 /* MENU */
 
 .content {
-    width: 110vw;  
+    width: 130vw;  
     height: 70px;
     display: flex;
     justify-content: space-around;    
     align-items: center;  
     background-color: #107333;
     position: fixed;
-    padding-left: 30rem;                   
+    padding-left:40rem;               
 }
 
 .logo {        
