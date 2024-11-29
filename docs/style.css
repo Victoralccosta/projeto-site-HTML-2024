@@ -42,14 +42,6 @@ html {
     align-items: center;      
 }
 
-
-.logo h3 {
-   color: white;
-   font-size: 1.6rem;            
-
-}
-
-
 .logo img {
     width: 100%;     
     height: 100%;
@@ -96,13 +88,6 @@ html {
     align-items: center;       
 }
 
-.first-section .conteudo-principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;          
-    justify-content: center;                
-}
-
 .first-section h1 {
     color: #107333;
     -webkit-text-stroke-width: 1px;
@@ -135,7 +120,7 @@ html {
     margin-top: 5rem;                 
 }
 
-.btn button:hover {                  
+.btn button:hover {                   
     border: 1px solid #bf212e;
     background-color: #bf212e;
     color: #fd0000;
@@ -257,16 +242,10 @@ html {
 }
 
 .contentsobre {
-    
     display: flex;           
     flex-direction: column;
     align-items: center;  
     justify-content: center;    
-}
-
-.main {     
-    display: flex;
-    justify-content: space-between;
 }
 
 .sobre-nos img {
@@ -314,10 +293,6 @@ html {
     font-size: 2rem;       
 }
 
-.contatos-secao i {
-    margin-right: 1rem;  
-}
-
 .contatos-secao div {
     cursor: pointer;            
     display: flex;
@@ -338,208 +313,33 @@ html {
     color: #ff0000;           
     font-weight: bold;
 }
+
 /* Estilo para o slider */
 .slider {
     position: relative;
     width: 100%;
-    max-width: 1000px;
-    margin: 30px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    border: 2px solid #ddd;
-    margin-bottom: 40px; /* Garantir que o slider não sobreponha o rodapé */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 20px;
-}
-
-.slide img {
+.slider img {
     width: 100%;
-    height: 300px; /* Definindo uma altura fixa para todas as imagens */
-    object-fit: cover; /* Fazendo com que as imagens preencham a área sem distorcer */
-    border-radius: 10px;
+    height: auto;
+    display: block;
 }
 
-.title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.description {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.preco {
-    font-size: 20px;
-    font-weight: bold;
-    color: #28a745;
-}
-
-.button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.prev, .next {
+#prev, #next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 2rem;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: #fff;
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 18px;
 }
 
-.prev {
-    left: 10px;
-}
+#prev { left: 10px; }
+#next { right: 10px; }
 
-.next {
-    right: 10px;
-}
-
-/* Estilo do rodapé */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: white;
-    margin-top: 20px;
-}
-
-/* Estilos padrão (para telas grandes, como desktop) */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-main {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Media Query para dispositivos móveis (smaller screens) */
-@media (max-width: 768px) {
-    /* Ajuste do layout para tablets e smartphones */
-    header {
-        padding: 15px;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    footer {
-        padding: 8px;
-    }
-}
-
-/* Media Query para smartphones em modo retrato (portrait) */
-@media (max-width: 480px) {
-    /* Ajustes adicionais para smartphones */
-    body {
-        font-size: 16px;  /* Reduzir o tamanho da fonte para telas pequenas */
-    }
-
-    header {
-        font-size: 18px;
-    }
-
-    main {
-        padding: 8px;
-    }
-
-    footer {
-        padding: 6px;
-    }
-}
-
-/* Usando Flexbox para layout flexível */
-.container {
-    display: flex;
-    flex-direction: row; /* Colunas em telas grandes */
-    justify-content: space-between;
-}
-
-.container div {
-    width: 48%;  /* Cada div ocupa 48% da largura em telas grandes */
-}
-
-/* Para telas pequenas (como smartphones) */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Empilha as divs em colunas em telas menores */
-    }
-
-    .container div {
-        width: 100%;  /* Cada div ocupa 100% da largura em smartphones */
-        margin-bottom: 20px;  /* Espaço entre as divs */
-    }
-}
-
-img {
-    max-width: 100%; /* As imagens não ultrapassam a largura da tela */
-    height: auto;    /* Mantém a proporção da imagem */
-}
-/* Estilo para o slider */
-.slider {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 30px auto;
-    overflow: hidden;
-    border-radius: none;
-    border: none;
-    margin-bottom: 40px; /* Garantir que o slider não sobreponha o rodapé */
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 20px;
-}
-
-.slide img {
-    width: 100%;  /* Ocupa 100% da largura do container */
-    height: auto;  /* A altura será ajustada proporcionalmente */
-    max-height: 300px;  /* Define um valor máximo para a altura */
-    object-fit: cover;  /* Faz com que a imagem preencha a área sem distorcer */
-    border-radius: 10px;
-}
