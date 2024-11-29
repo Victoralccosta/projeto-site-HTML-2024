@@ -512,3 +512,34 @@ img {
     max-width: 100%; /* As imagens não ultrapassam a largura da tela */
     height: auto;    /* Mantém a proporção da imagem */
 }
+/* Estilo para o slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: none;
+    border: none;
+    margin-bottom: 40px; /* Garantir que o slider não sobreponha o rodapé */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+.slide img {
+    width: 100%;  /* Ocupa 100% da largura do container */
+    height: auto;  /* A altura será ajustada proporcionalmente */
+    max-height: 300px;  /* Define um valor máximo para a altura */
+    object-fit: cover;  /* Faz com que a imagem preencha a área sem distorcer */
+    border-radius: 10px;
+}
