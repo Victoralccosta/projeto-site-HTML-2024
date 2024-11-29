@@ -1,328 +1,209 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');               
-
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-
+/* Resetando margens e paddings */
 * {
     margin: 0;
-    padding: 0;        
-    box-sizing: border-box;             
-    list-style: none;         
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
     outline: none;
     border: none;
-    text-decoration: none;       
+    text-decoration: none;
 }
 
 html {
-    width: 100vw;     
-    height: 100vh;
-    font-size: 62.5%;          
-    font-family: 'Roboto', sans-serif;        
+    font-size: 62.5%;  /* Definindo o tamanho da fonte como 10px, facilitando o uso de rem */
     overflow-x: hidden;
-    scroll-behavior: smooth;          
+    scroll-behavior: smooth;
 }
 
-/* MENU */
-
+/* Menu */
 .content {
-    width: 100vw;  
+    width: 100vw;
     height: 30px;
     display: flex;
-    justify-content: space-around;    
-    align-items: center;  
+    justify-content: space-around;
+    align-items: center;
     background-color: #107333;
     position: fixed;
-    padding-left: 30rem;                   
+    padding-left: 30rem;
 }
 
-.logo {        
+.logo {
     width: 70px;
     height: auto;
     cursor: pointer;
     display: flex;
-    align-items: center;      
-}
-
-.logo h3 {
-   color: white;
-   font-size: 1.6rem;            
+    align-items: center;
 }
 
 .logo img {
-    width: 100%;     
+    width: 100%;
     height: 100%;
 }
 
 .content .list-menu {
-    width: 600px;     
+    width: 600px;
     display: flex;
-    align-items: center;  
+    align-items: center;
     justify-content: space-between;
 }
 
 .content .list-menu li a {
-    padding-top: 3rem;                
-    padding-bottom: 2rem;                
-    padding-left: 1rem;                      
-    padding-right: 1rem;                  
+    padding: 1rem;
     color: rgb(255, 0, 0);
-    font-size: 1.8rem;          
-    text-transform: uppercase;                
-    font-weight: 500;     
-    transition: all 200ms ease-in;                   
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 200ms ease-in;
 }
 
-.content .list-menu li a:hover {   
+.content .list-menu li a:hover {
     background-color: #bf212e;
-    border-bottom: 4px solid #ffffff;  
+    border-bottom: 4px solid #ffffff;
     color: #ffffff;
 }
 
 /* Primeira Seção */
-
 .first-section {
     height: 100vh;
     width: 100vw;
     background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url(./fundo.jpg);
     background-position: center center;
-    background-size: cover;             
-    background-repeat: no-repeat;            
-    background-position-y: 70px;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;            
-    align-items: center;       
-}
-
-.first-section .conteudo-principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;          
-    justify-content: center;                
+    justify-content: center;
+    align-items: center;
 }
 
 .first-section h1 {
     color: #107333;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #ff00001e;
-    font-size: 10rem;           
-    text-transform: uppercase;                       
+    font-size: 5rem;  /* Reduzido o tamanho da fonte para ser adequado para dispositivos móveis */
+    text-transform: uppercase;
     margin-bottom: 1rem;
-    font-family: 'Indie Flower', cursive;             
+    font-family: 'Indie Flower', cursive;
 }
 
 .first-section h2 {
     color: #bf212e;
-    font-size: 3rem;                     
-    font-weight: 400;
-    text-transform: uppercase;                        
-    font-family: 'Indie Flower', cursive;                 
+    font-size: 2rem;
+    text-transform: uppercase;
     margin-bottom: 3rem;
 }
 
 .btn button {
-    width: 230px;         
+    width: 230px;
     height: 60px;
     cursor: pointer;
-    text-transform: uppercase;                   
     background-color: #107333;
     border-radius: 10px;
     color: black;
-    font-weight: 700;            
-    transition: all 400ms ease-in;                   
-    margin-top: 5rem;                 
+    font-weight: 700;
+    transition: all 400ms ease-in;
+    margin-top: 5rem;
 }
 
-.btn button:hover {                  
-    border: 1px solid #bf212e;
+.btn button:hover {
     background-color: #bf212e;
     color: #fd0000;
 }
 
+/* Responsividade para dispositivos móveis (smartphones) */
+@media (max-width: 768px) {
+    .content {
+        padding-left: 0;  /* Remover o espaçamento extra no menu */
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;  /* Ajustar o padding para telas menores */
+    }
 
-/* Cardápio */
+    .content .list-menu {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.cardapio { 
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;             
-    background-image: linear-gradient(rgba(189, 5, 5, 0.8), rgba(173, 8, 2, 0.945)), url(/img/cardapio.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;            
-    background-size: cover;                     
+    .content .list-menu li a {
+        font-size: 1.6rem;  /* Ajustar o tamanho da fonte do menu */
+        padding: 1.5rem 2rem;
+    }
+
+    /* Ajuste para o header */
+    header {
+        padding: 10px;
+    }
+
+    .first-section h1 {
+        font-size: 4rem;  /* Ajustar o tamanho da fonte */
+    }
+
+    .first-section h2 {
+        font-size: 1.8rem;  /* Ajustar o tamanho da fonte */
+    }
+
+    .btn button {
+        width: 100%;  /* Ajustar o botão para ocupar a largura total da tela */
+        padding: 1rem;
+        font-size: 1.8rem;  /* Tamanho de fonte maior para o botão */
+    }
 }
 
-.cardapio h2 { 
-    font-size: 5rem;                 
-    color: #ffffff;
-    text-transform: uppercase;                     
+/* Responsividade para smartphones em modo retrato (portrait) */
+@media (max-width: 480px) {
+    .first-section h1 {
+        font-size: 3rem;  /* Reduzir o tamanho do título */
+    }
+
+    .first-section h2 {
+        font-size: 1.6rem;  /* Ajustar a fonte do subtítulo */
+    }
+
+    .btn button {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.6rem;
+    }
+
+    /* Ajustar imagens */
+    .cardapio img, .itens-cardapio img {
+        width: 100%;  /* Redimensionar imagens para a largura da tela */
+        height: auto;
+    }
+
+    .itens-cardapio .info {
+        width: 100%;  /* Ajustar o tamanho do item no cardápio */
+        margin-bottom: 1rem;
+    }
+
+    /* Ajuste para a seção sobre-nos */
+    .sobre-nos {
+        padding-bottom: 5rem;
+    }
+
+    .sobre-nos img {
+        width: 100%;  /* Tornar a imagem responsiva */
+        margin: 2rem 0;
+        border: none;
+    }
 }
 
-.itens-cardapio {
-    width: 80%;          
-    margin-top: 2rem;              
-    margin-bottom: 2rem;
-    display: grid;         
-    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));                            
-    justify-content: center;           
-    align-items: center;        
-    gap: 30px;         
+/* Ajustes do slider para smartphones */
+.slider {
+    width: 100%;
+    margin: 10px auto;
 }
 
-.itens-cardapio .info {
-    background-color: #107333;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;        
-    justify-content: center;             
-    padding: 1.5rem;            
+.slide img {
+    height: 200px;  /* Reduzir a altura da imagem no slider */
 }
 
-.itens-cardapio .info h3 {
-    font-size: 1.8rem;               
-    text-transform: uppercase;                   
-    margin-bottom: 1rem;
-    text-decoration: underline;            
+.title, .description, .preco {
+    font-size: 1.4rem;  /* Ajustar o tamanho da fonte */
 }
 
-.itens-cardapio .info h4 {
-    font-size: 1.4rem;                
-    text-transform: uppercase;                   
-    margin-bottom: 0.6rem;
-    display: grid;        
-    justify-content: center;            
-    align-items: center;  
-    grid-template-columns: 150px 150px;           
-    margin-left: 6rem;            
-}
- 
-.itens-cardapio .info h4 span {
-    font-size: 1.6rem;           
-    color: #ff0505;
-    margin-left: 1.5rem;    
-    text-decoration: underline;          
-} 
-
-.itens-cardapio .info h5 span {
-    font-size: 1.6rem;               
-    color: #ff0505;
-    margin-left: 1.5rem;              
-    text-decoration: underline;             
+.button {
+    padding: 8px 16px;  /* Ajustar o tamanho do botão */
 }
 
-.itens-cardapio div {
-    background-color: #bf212e;
-    box-shadow: 0px 0px 4px 1px;             
-}
-
-.itens-cardapio img {   
-    width: 100%;             
-    height: 200px;
-}
-
-.itens-cardapio .info .pedir {
-    width: 200px;    
-    height: 35px;
-    margin-top: 0.5rem;            
-    background-color: #ffffff;
-    border-radius: 5px;
-    text-transform: uppercase;                   
-    cursor: pointer; 
-    color: rgb(0, 0, 0);
-    transition: all 200ms ease-in;                 
-}
-
-.itens-cardapio .info .pedir:hover {
-    background-color: #ff0000;
-    color: rgb(255, 255, 255);
-}
-
-/* Sobre nós */
-
-.sobre-nos {
-    background-color: #107333;
-    width: 100%;           
-    padding-bottom: 10rem;           
-    color: #ff0015;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #ffffff36;
-    display: flex;
-    align-items: center;            
-    justify-content: center;                   
-}
-
-.contentsobre {
-    display: flex;           
-    flex-direction: column;
-    align-items: center;  
-    justify-content: center;    
-}
-
-.main {     
-    display: flex;
-    justify-content: space-between;
-}
-
-.sobre-nos img {
-    width: 350px;   
-    height: 300px;
-    margin-top: 10rem;     
-    margin-left: 10rem;      
-    border: 2px solid rgb(0, 0, 0);
-}
-
-.contentsobre h2 {
-   font-size: 6rem;       
-   margin-bottom: 1rem;
-   font-family: 'Indie Flower', cursive;         
-}
-
-.contentsobre p {
-   text-align: center;              
-   font-size: 1.8rem;             
-   width: 600px;   
-}
-
-.contatos {
-    width: 100%;  
-    background-color: #107333;
-    display: flex;
-    flex-direction: column;
-    justify-content: Center; 
-    align-items: center;  
-    font-size: 1.8rem;      
-    color: #000000;
-    padding-bottom: 4rem;   
-}
-
-.contatos h3 {
-   font-size: 6rem;       
-   margin-bottom: 3rem;
-   font-family: 'Indie Flower', cursive;      
-}
-
-.contatos-secao {
-    width: 650px;  
-    display: flex;
-    justify-content: space-between;  
-    font-size: 2rem;       
-}
-
-.contatos-secao i {
-    margin-right: 1rem;  
-}
-
-.contatos-secao div {
-    cursor: pointer;            
-    display: flex;
-    justify-content: space-between;      
-    width: 30%;               
-}
-
-.contatos-secao div:hover {
-    opacity: 0.7;
-    color: #bf212e;     
-    transform: translateY(2px);
+.prev, .next {
+    font-size: 16px;  /* Ajustar o tamanho das setas */
 }
