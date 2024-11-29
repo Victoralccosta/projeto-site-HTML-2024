@@ -12,130 +12,6 @@
     <script src="https://kit.fontawesome.com/3df637a2f2.js" crossorigin="anonymous"></script>
     <title>Restaurante La Tavola</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-        }
-
-        header .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 10px;
-        }
-
-        header .logo img {
-            width: 100px;
-        }
-
-        .list-menu {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        .list-menu li {
-            margin: 0 15px;
-        }
-
-        .list-menu a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        
-        h1 {
-            text-align: center;
-            margin: 40px 0;
-            font-size: 28px;
-            color: #333;
-        }
-
-        form {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        form input,
-        form select,
-        form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-
-        form textarea {
-            resize: vertical;
-        }
-
-        form input[type="submit"] {
-            background-color: #e53935;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            padding: 12px 20px;
-            border-radius: 5px;
-        }
-
-        form input[type="submit"]:hover {
-            background-color: #c13531;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            header .content {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            header .list-menu {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            header .menu-toggle {
-                display: block;
-                cursor: pointer;
-                background-color: #333;
-                padding: 5px;
-                border-radius: 5px;
-            }
-
-            header .menu-toggle div {
-                width: 25px;
-                height: 3px;
-                background-color: #fff;
-                margin: 5px 0;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -145,6 +21,7 @@
                 <img src="logotavolaoficial.png" alt="La Tavola">
             </div>
             <ul class="list-menu">
+                <h1>reserva la tavola</h1>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#contatos">Contatos</a></li>
                 <li><a href="reserva.html">Reserva</a></li>
@@ -155,16 +32,8 @@
         </div>
     </header>
     
-    <h1>
-    reserva la tavola
-    </h1>
+    
 
-    <h2>
-
-
-
-
-    </h2>
     <form action="reservar.php" method="post" onsubmit="return validarFormulario()">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
