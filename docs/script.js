@@ -171,3 +171,11 @@ document.querySelector('.prev').addEventListener('click', prevSlide);
 // Mostrar o slide inicial
 mostrarSlides();
 }
+// Selecionando elementos
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+// Função de toggle para abrir e fechar o menu
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');  // Alterna a classe 'active'
+});
