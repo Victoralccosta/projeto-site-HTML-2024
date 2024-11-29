@@ -8,7 +8,7 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #333;
+    background-color: #107333; /* Verde */
     color: #fff;
     padding: 10px 0;
 }
@@ -38,9 +38,16 @@ header .logo img {
 }
 
 .list-menu a {
-    color: white;
+    color: rgb(255, 0, 0); /* Vermelho */
     text-decoration: none;
     font-weight: bold;
+    transition: all 200ms ease-in;
+}
+
+.list-menu a:hover {
+    background-color: #bf212e; /* Vermelho escuro */
+    border-bottom: 4px solid #ffffff;
+    color: #ffffff;
 }
 
 /* Título */
@@ -73,7 +80,7 @@ form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Cinza claro */
     border-radius: 4px;
     font-size: 16px;
 }
@@ -83,7 +90,7 @@ form textarea {
 }
 
 form input[type="submit"] {
-    background-color: #e53935;
+    background-color: #107333; /* Verde */
     color: white;
     border: none;
     cursor: pointer;
@@ -94,7 +101,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #c13531;
+    background-color: #bf212e; /* Vermelho escuro */
 }
 
 /* Responsividade */
