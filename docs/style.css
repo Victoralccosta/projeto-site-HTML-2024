@@ -24,7 +24,7 @@ html {
 /* MENU */
 
 .content {
-    width: 100vw;  
+    width: 110vw;  
     height: 70px;
     display: flex;
     justify-content: space-around;    
