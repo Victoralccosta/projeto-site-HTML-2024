@@ -194,3 +194,38 @@ footer {
     text-align: center;
     margin-top: 2rem;
 }
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+    html {
+        font-size: 50%; /* Ajusta o tamanho da fonte em telas pequenas */
+    }
+
+    header {
+        padding: 1rem; /* Menor padding para o header em telas pequenas */
+    }
+
+    .carrinho {
+        padding: 1rem; /* Menos padding no carrinho */
+        max-width: 100%; /* Carrinho ocupa toda a largura da tela */
+        margin: 2rem auto; /* Margem ajustada */
+    }
+
+    #itensCarrinho li {
+        font-size: 1.4rem; /* Menor fonte para itens no carrinho */
+    }
+
+    .produto {
+        width: 90%; /* Maior largura para os produtos em telas pequenas */
+        margin-bottom: 1.5rem; /* Menos espaçamento entre os produtos */
+    }
+
+    button {
+        padding: 1rem 1.5rem; /* Ajuste no padding dos botões */
+        font-size: 1.4rem; /* Tamanho de fonte reduzido */
+    }
+
+    footer {
+        padding: 1rem; /* Menos padding no footer */
+    }
+}
