@@ -196,7 +196,7 @@ h2 {
 
 .contatos-secao i {
     font-size: 2rem;
-    color: #ff6600;
+    color: #0f0701;
     margin-right: 10px;
 }
 
@@ -206,7 +206,7 @@ h2 {
 
 /* Estilos para o Footer */
 footer {
-    background-color: #000;
+    background-color: #155704;
     color: white;
     padding: 20px;
     text-align: center;
