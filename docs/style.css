@@ -512,3 +512,172 @@ img {
     max-width: 100%; /* As imagens não ultrapassam a largura da tela */
     height: auto;    /* Mantém a proporção da imagem */
 }
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+nav ul.list-menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul.list-menu li {
+    margin: 0 15px;
+}
+
+nav ul.list-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Estilo da seção do carrinho */
+.carrinho {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+#itensCarrinho {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#itensCarrinho li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#itensCarrinho li button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#itensCarrinho li button:hover {
+    background-color: #e04040;
+}
+
+.total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #28a745; /* Cor verde */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.mensagem {
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Estilo dos produtos no cardápio */
+#cardapio {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.produto {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.produto h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.produto p {
+    font-size: 16px;
+    color: #555;
+}
+
+.produto button {
+    background-color: #28a745; /* Cor verde */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.produto button:hover {
+    background-color: #218838;
+}
