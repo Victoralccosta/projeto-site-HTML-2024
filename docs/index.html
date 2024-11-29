@@ -11,28 +11,21 @@
     <script src="https://kit.fontawesome.com/3df637a2f2.js" crossorigin="anonymous"></script>
     <title>Restaurante La Tavola</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        section {
+        /* Estilo para o slider */
+        .slider {
+            position: relative;
             width: 100%;
-            max-width: 1200px;
-            margin: 50px auto;
-            position: relative;
-        }
-
-        .slider-container {
-            position: relative;
+            max-width: 1000px;
+            margin: 30px auto;
             overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            margin-bottom: 40px; /* Garantir que o slider não sobreponha o rodapé */
         }
 
         .slides {
             display: flex;
-            transition: transform 0.5s ease;
+            transition: transform 0.5s ease-in-out;
         }
 
         .slide {
@@ -40,62 +33,51 @@
             box-sizing: border-box;
             text-align: center;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 0 5px;
         }
 
         .slide img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 300px; /* Definindo uma altura fixa para todas as imagens */
+            object-fit: cover; /* Fazendo com que as imagens preencham a área sem distorcer */
             border-radius: 10px;
         }
 
         .title {
             font-size: 24px;
             font-weight: bold;
-            margin: 15px 0;
+            margin: 10px 0;
         }
 
         .description {
-            font-size: 16px;
-            color: #555;
+            font-size: 18px;
+            margin-bottom: 20px;
         }
 
         .preco {
             font-size: 20px;
             font-weight: bold;
-            color: #e53935;
-            margin: 15px 0;
+            color: #28a745;
         }
 
         .button {
-            background-color: #e53935;
-            color: #fff;
             padding: 10px 20px;
+            background-color: #333;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
         }
 
-        .button:hover {
-            background-color: #c13531;
-        }
-
-        .prev,
-        .next {
+        .prev, .next {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
-            font-size: 30px;
             border: none;
             padding: 10px;
             cursor: pointer;
-            z-index: 1;
+            font-size: 18px;
         }
 
         .prev {
@@ -106,12 +88,13 @@
             right: 10px;
         }
 
+        /* Estilo do rodapé */
         footer {
             text-align: center;
-            margin-top: 50px;
-            padding: 20px;
+            padding: 20px 0;
             background-color: #333;
-            color: #fff;
+            color: white;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -297,37 +280,62 @@
     </footer>
 
     <script>
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
-
-        const prevButton = document.querySelector('.prev');
-        const nextButton = document.querySelector('.next');
-
-        // Função para mostrar o slide atual
-        function updateSlidePosition() {
-            const slideWidth = slides[0].clientWidth;
-            document.querySelector('.slides').style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-        }
-
-        // Função para ir para o slide anterior
-        prevButton.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = totalSlides - 1;
+        // Aguardar até que o DOM esteja completamente carregado
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializa o carrinho (pode ser um array que armazena os itens)
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    
+            // Função para adicionar item ao carrinho
+            function adicionarAoCarrinho(event) {
+                const button = event.target;
+                const nome = button.getAttribute('data-nome');
+                const preco = button.getAttribute('data-preco');
+    
+                const itemCarrinho = { nome, preco: parseFloat(preco) };
+    
+                // Adiciona o item ao carrinho
+                carrinho.push(itemCarrinho);
+    
+                // Atualiza o localStorage
+                localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    
+                // Exibe uma mensagem de confirmação
+                alert(`${nome} foi adicionado ao seu carrinho!`);
             }
-            updateSlidePosition();
-        });
-
-        // Função para ir para o próximo slide
-        nextButton.addEventListener('click', () => {
-            if (currentIndex < totalSlides - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
+    
+            // Adiciona evento de clique nos botões "Pedir Agora"
+            const botoesAdicionar = document.querySelectorAll('.pedir');
+            botoesAdicionar.forEach(button => {
+                button.addEventListener('click', adicionarAoCarrinho);
+            });
+    
+            // Lógica do Slider
+            let slideIndex = 0;
+    
+            function moverSlide(n) {
+                slideIndex += n;
+                mostrarSlides();
             }
-            updateSlidePosition();
+    
+            function mostrarSlides() {
+                const slides = document.querySelectorAll('.slide');
+                if (slideIndex >= slides.length) {
+                    slideIndex = 0;
+                }
+                if (slideIndex < 0) {
+                    slideIndex = slides.length - 1;
+                }
+    
+                const offset = -slideIndex * 100;
+                document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+            }
+    
+            // Inicia o slider exibindo o primeiro slide
+            mostrarSlides();
+    
+            // Eventos dos botões do slider
+            document.querySelector('.prev').addEventListener('click', () => moverSlide(-1));
+            document.querySelector('.next').addEventListener('click', () => moverSlide(1));
         });
     </script>
     
