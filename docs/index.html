@@ -53,10 +53,11 @@
         .preco {
             font-size: 20px;
             font-weight: bold;
-            color: #28a745;
+            color: black;
         }
 
         .button {
+            margin-top: 8px;
             padding: 10px 20px;
             background-color: #333;
             color: white;
@@ -67,14 +68,19 @@
 
         .prev, .next {
             position: absolute;
-            top: 60%;
+            top: 35%;
             transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.1);
             color: white;
             border: none;
+            border-radius: 8px;
             padding: 10px;
             cursor: pointer;
             font-size: 18px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .prev {
@@ -143,6 +149,10 @@
     </section>
 
     <section class="cardapio" id="cardapio">
+        <br />
+        <br />
+        <br />
+        <br />
         <h2>Cardápio</h2>
 
         <!-- Slider de itens do cardápio -->
@@ -151,7 +161,7 @@
                 <!-- Exemplo de slide com item do cardápio -->
                 <div class="slide" data-id="1" data-name="macaroni" data-preco="80,00">
                     <img src="./macaroni.jpg" alt="macaroni">
-                    <div class="title">macoroni cheddar</div>
+                    <div class="title">Macoroni cheddar</div>
                     <div class="description">Massa al dente com molho cremoso de cheddar, perfeito para uma refeição rápida e deliciosa!</div>
                     <div class="preco">R$ 80,00</div>
                     <button class="button pedir" data-nome="macaroni" data-preco="80,00">Pedir agora</button>
@@ -183,7 +193,7 @@
 
                 <div class="slide" data-id="5" data-name="ravioli" data-preco="65,00">
                     <img src="./ravioli.jpg" alt="Macarrão ravioli">
-                    <div class="title">ravioli</div>
+                    <div class="title">Ravioli</div>
                     <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
                     <div class="preco">R$ 65,00</div>
                     <button class="button pedir" data-nome="Macarrão Carbonara" data-preco="65,00">Pedir agora</button>
@@ -191,7 +201,7 @@
 
                 <div class="slide" data-id="6" data-name="tagliatellea" data-preco="65,00">
                     <img src="./tagliatellea.jpg" alt="tagliatellea">
-                    <div class="title">tagliatellea</div>
+                    <div class="title">Tagliatellea</div>
                     <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
                     <div class="preco">R$ 65,00</div>
                     <button class="button pedir" data-nome="Macarrão tagliatellea" data-preco="65,00">Pedir agora</button>
@@ -199,7 +209,7 @@
 
                 <div class="slide" data-id="7" data-name="Macarrão fusili" data-preco="65,00">
                     <img src="./fusilli.png" alt="macarrão fusili">
-                    <div class="title">fusili com salmão grelhado</div>
+                    <div class="title">Fusili com salmão grelhado</div>
                     <div class="description">O macarrão carbonara é uma das receitas mais amadas da culinária italiana...</div>
                     <div class="preco">R$ 65,00</div>
                     <button class="button pedir" data-nome="Macarrão fusilli" data-preco="65,00">Pedir agora</button>
@@ -223,7 +233,7 @@
             
                 <div class="slide" data-id="11" data-name="adega" data-preco="65,00">
                     <img src="./adega.jpg" alt="adega">
-                    <div class="title">bebidas</div>
+                    <div class="title">Bebidas</div>
                     <div class="description">uma boa massa pede um bom vinho, venha conhecer nosso cardapio de bebidas.</div>
                     <div class="preco">R$ 65,00</div>
                     <button class="button pedir" data-nome="adega" data-preco="65,00">Pedir agora</button>
@@ -241,7 +251,7 @@
 
                 <div class="slide" data-id="13" data-name="vinho barolo" data-preco="65,00">
                     <img src="./barolo.jpeg" alt="vinho barolo">
-                    <div class="title">barolo</div>
+                    <div class="title">Barolo</div>
                     <div class="description">uma boa garrafa de vinho barolo.</div>
                     <div class="preco">R$ 65,00</div>
                     <button class="button pedir" data-nome="vinho barolo" data-preco="65,00">Pedir agora</button>
@@ -250,7 +260,7 @@
 
                 <div class="slide" data-id="14" data-name="vinho brunello" data-preco="65,00">
                     <img src="./brunello montalcino.jpg" alt="vinho brunello">
-                    <div class="title">vinho brunello</div>
+                    <div class="title">Vinho brunello</div>
                     <div class="description">uma boa garrafa de vinho brunello.</div>
                     <div class="preco">R$ 65,00</div>
                     <button class="button pedir" data-nome="vinho brunello" data-preco="65,00">Pedir agora</button>
@@ -259,7 +269,7 @@
 
                 <div class="slide" data-id="15" data-name="vinho chianti" data-preco="65,00">
                     <img src="./chianti.jpeg" alt="vinho chianti">
-                    <div class="title">vinho chianti</div>
+                    <div class="title">Vinho chianti</div>
                     <div class="description">uma boa garrafa de vinho chianti...</div>
                     <div class="preco">R$ 65,00</div>
                     <button class="button pedir" data-nome="vinho chianti" data-preco="65,00">Pedir agora</button>
@@ -268,7 +278,7 @@
 
                 <div class="slide" data-id="16" data-name="vinho prosecco" data-preco="65,00">
                     <img src="./prosecco.jpg" alt="vinho prosecco">
-                    <div class="title">vinho prosecco</div>
+                    <div class="title">Vinho prosecco</div>
                     <div class="description">uma boa garrafa de vinho prosecco...</div>
                     <div class="preco">R$ 65,00</div>
                     <button class="button pedir" data-nome="vinho prosecco" data-preco="65,00">Pedir agora</button>

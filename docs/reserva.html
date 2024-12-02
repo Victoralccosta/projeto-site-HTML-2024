@@ -20,8 +20,10 @@
             <div class="logo">
                 <img src="logotavolaoficial.png" alt="La Tavola">
             </div>
+            <div style="width:100%">
+                <h1>RESERVA LA TAVOLA</h1>
+            </div>
             <ul class="list-menu">
-                <h1>reserva la tavola</h1>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#contatos">Contatos</a></li>
                 <li><a href="reserva.html">Reserva</a></li>
@@ -34,7 +36,7 @@
     
     
 
-    <form action="reservar.php" method="post" onsubmit="return validarFormulario()">
+    <form action="reservar.php" method="post" onsubmit="return validarFormulario()" style="margin-top: 32px;">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
 
@@ -73,23 +75,25 @@
 
     <script src="./script.js"></script>
 
-    <section class="contatos" id="contatos">
-        <h3>Contatos</h3>
-        <div class="contatos-secao">
-            <div>
-                <i class="fas fa-phone"></i>
-                <span>(19) 98888-7777</span>
+    <div style="display: flex; width: 100%; align-items: center; justify-content: center;">
+        <section class="contatos" id="contatos">
+            <div class="contatos-secao">
+                <h3>Contatos</h3>
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <span>(19) 98888-7777</span>
+                </div>
+                <div>
+                    <i class="fab fa-instagram"></i>
+                    <span>@Latavola_italiana</span>
+                </div>
+                <div>
+                    <i class="fab fa-facebook-f"></i>
+                    <span>LaTavola Italiana</span>
+                </div>
             </div>
-            <div>
-                <i class="fab fa-instagram"></i>
-                <span>@Latavola_italiana</span>
-            </div>
-            <div>
-                <i class="fab fa-facebook-f"></i>
-                <span>LaTavola Italiana</span>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <footer>
         <p>&copy; 2024 Restaurante La Tavola. Todos os direitos reservados.</p>

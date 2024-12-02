@@ -32,6 +32,7 @@ html {
     background-color: #107333;
     position: fixed;
     padding-left:1rem;               
+    z-index: 99999;
 }
 
 .logo {        
@@ -105,6 +106,10 @@ html {
     text-transform: uppercase;                        
     font-family: 'Indie Flower', cursive;                 
     margin-bottom: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn button {
